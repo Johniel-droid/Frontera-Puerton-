@@ -5,20 +5,28 @@ como se llama el proyecto?
 frontera
 
 que hace el proyecto?
-Abrir y Cerrar un porton.
-
-cual es el objetivo del proyecto?
-Facilitar el acceso a una zona y brinda comodidad.
+Abrir y Cerrar un porton a distancia.
 
 
 quien nos pide el proyecto?
 El maestro
 
-Cual es su objetivo del profesor?
+Cual es su objetivo del profesor con nuestro proyecto?
 Enseñarnos como hacer un proyecto
+el objetivo es enseñar programación y maquina de estados, comunicación WIFI.
 
-Cual seria el fin didactico del proyecto?
+porque?
+Es muy fácil entender el código mediante un ejemplo que uno maneja.
 
 
 Como dividiria el proyecto?
+caracteristicas
+
+Un motor, limit switch A y C, Pwm, micro, buzzer, luces indicadoras, y botoneras fotocelda, metodo para configuracion. 
+
+debe ser automatic o se debe de presionar un boton?
+
+criterio de evaluacion
+lista de requisitos.
+
 
