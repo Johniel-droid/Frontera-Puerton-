@@ -41,7 +41,7 @@
         "pads": {
           "drill": 0.8,
           "height": 1.27,
-          "width": 1.27
+          "width": 2.54
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -69,13 +69,7 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -116,9 +110,9 @@
         "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
-        "npth_inside_courtyard": "error",
+        "npth_inside_courtyard": "ignore",
         "padstack": "warning",
-        "pth_inside_courtyard": "error",
+        "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
@@ -148,20 +142,20 @@
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.0,
+        "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.1,
-        "min_microvia_diameter": 0.1,
+        "min_hole_to_hole": 0.25,
+        "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.1,
-        "min_track_width": 0.2,
+        "min_through_hole_diameter": 0.3,
+        "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.1,
+        "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -212,9 +206,7 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [
-        0.0
-      ],
+      "track_widths": [],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -241,12 +233,7 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        }
-      ],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -465,6 +452,7 @@
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
+      "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
       "isolated_pin_label": "warning",
@@ -505,14 +493,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "porton 2.kicad_pro",
+    "filename": "porton.kicad_pro",
     "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.05,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -539,11 +527,14 @@
   },
   "pcbnew": {
     "last_paths": {
+      "gencad": "",
       "idf": "",
       "netlist": "",
       "plot": "",
+      "pos_files": "",
       "specctra_dsn": "",
       "step": "",
+      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -565,109 +556,7 @@
       "ref_range_delimiter": "",
       "string_delimiter": "\""
     },
-    "bom_presets": [
-      {
-        "exclude_dnp": false,
-        "fields_ordered": [
-          {
-            "group_by": false,
-            "label": "Reference",
-            "name": "Reference",
-            "show": true
-          },
-          {
-            "group_by": false,
-            "label": "Qty",
-            "name": "${QUANTITY}",
-            "show": true
-          },
-          {
-            "group_by": true,
-            "label": "Value",
-            "name": "Value",
-            "show": true
-          },
-          {
-            "group_by": true,
-            "label": "DNP",
-            "name": "${DNP}",
-            "show": true
-          },
-          {
-            "group_by": true,
-            "label": "Exclude from BOM",
-            "name": "${EXCLUDE_FROM_BOM}",
-            "show": true
-          },
-          {
-            "group_by": true,
-            "label": "Exclude from Board",
-            "name": "${EXCLUDE_FROM_BOARD}",
-            "show": true
-          },
-          {
-            "group_by": true,
-            "label": "Exclude from Simulation",
-            "name": "${EXCLUDE_FROM_SIM}",
-            "show": true
-          },
-          {
-            "group_by": true,
-            "label": "Exclude from Position Files",
-            "name": "${EXCLUDE_FROM_POS_FILES}",
-            "show": true
-          },
-          {
-            "group_by": true,
-            "label": "Footprint",
-            "name": "Footprint",
-            "show": true
-          },
-          {
-            "group_by": false,
-            "label": "Datasheet",
-            "name": "Datasheet",
-            "show": true
-          },
-          {
-            "group_by": true,
-            "label": "lcsc",
-            "name": "lcsc",
-            "show": true
-          },
-          {
-            "group_by": false,
-            "label": "Descripción",
-            "name": "Description",
-            "show": false
-          },
-          {
-            "group_by": false,
-            "label": "Sim.Pins",
-            "name": "Sim.Pins",
-            "show": false
-          },
-          {
-            "group_by": false,
-            "label": "#",
-            "name": "${ITEM_NUMBER}",
-            "show": false
-          },
-          {
-            "group_by": false,
-            "label": "Sim.Device",
-            "name": "Sim.Device",
-            "show": false
-          }
-        ],
-        "filter_string": "",
-        "group_symbols": true,
-        "include_excluded_from_bom": true,
-        "name": "",
-        "sort_asc": true,
-        "sort_field": "Reference"
-      }
-    ],
+    "bom_presets": [],
     "bom_settings": {
       "exclude_dnp": false,
       "fields_ordered": [
@@ -709,18 +598,6 @@
         },
         {
           "group_by": true,
-          "label": "Exclude from Simulation",
-          "name": "${EXCLUDE_FROM_SIM}",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "Exclude from Position Files",
-          "name": "${EXCLUDE_FROM_POS_FILES}",
-          "show": true
-        },
-        {
-          "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -730,42 +607,12 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
-        },
-        {
-          "group_by": true,
-          "label": "lcsc",
-          "name": "lcsc",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Descripción",
-          "name": "Description",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Pins",
-          "name": "Sim.Pins",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Device",
-          "name": "Sim.Device",
-          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "",
+      "name": "Default Editing",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -798,29 +645,33 @@
     "meta": {
       "version": 1
     },
+    "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
+    "space_save_all_events": true,
+    "spice_current_sheet_as_root": false,
+    "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_dissipations": false,
+    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "porton 2.kicad_sch",
-        "name": "Raíz",
-        "uuid": "5eba40bb-3b38-433a-a9b0-f5d113ce2c5a"
+        "filename": "porton.kicad_sch",
+        "name": "porton",
+        "uuid": "4523f0a2-6877-4f71-843b-20370e1fb00c"
       }
     ],
-    "used_designators": "#PWR3-43,C1-15,D2-9,H1-4,J2,J7-11,L2,MOTOR1,Q1-2,R1-14,SW1-2,U1-5",
-    "variants": [
-      {
-        "name": "lcsc"
-      }
-    ]
+    "used_designators": "#PWR1-58,BZ1,C1-27,D1-6,F1,FB1,H1-4,J1-10,L1-2,P1-2,Q1,R1-22,SW1-8,U1-8",
+    "variants": []
   },
   "sheets": [
     [
-      "5eba40bb-3b38-433a-a9b0-f5d113ce2c5a",
-      "Raíz"
+      "4523f0a2-6877-4f71-843b-20370e1fb00c",
+      "porton"
     ]
   ],
   "text_variables": {},
